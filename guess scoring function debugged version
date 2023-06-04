@@ -1,0 +1,11 @@
+def score_guess(guess, target_word):
+    exact_matches = 0
+    misplaced_matches = 0
+
+    for i in range(len(guess)):
+        if guess[i] == target_word[i]:
+            exact_matches += 1
+        elif guess[i] in target_word:
+            misplaced_matches += 1
+
+    return exact_matches, misplaced_matches
